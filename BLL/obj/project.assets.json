@@ -8252,11 +8252,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\BLL\\BLL.csproj",
+      "projectPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\Mykola Gritchuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\BLL\\obj\\",
+      "outputPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mykola Gritchuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8272,8 +8272,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\Models\\Models.csproj"
+            "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\Models\\Models.csproj"
             }
           }
         }

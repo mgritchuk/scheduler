@@ -8231,11 +8231,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\Models\\Models.csproj",
+      "projectPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\Mykola Gritchuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\MyFirstProject\\Models\\obj\\",
+      "outputPath": "C:\\Users\\Mykola Gritchuk\\Source\\Repos\\scheduler\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mykola Gritchuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
