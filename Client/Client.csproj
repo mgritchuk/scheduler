@@ -163,9 +163,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="my-app\.gitignore" />
+    <Content Include="my-app\.angular-cli.json" />
+    <Content Include="my-app\.editorconfig" />
+    <Content Include="my-app\e2e\tsconfig.e2e.json" />
     <Content Include="my-app\karma.conf.js" />
+    <Content Include="my-app\package.json" />
     <Content Include="my-app\protractor.conf.js" />
+    <Content Include="my-app\README.md" />
     <Content Include="my-app\src\app\app.component.css" />
     <Content Include="my-app\src\app\app.component.html" />
     <Content Include="my-app\src\app\test-component\test-component.component.css" />
@@ -173,6 +177,10 @@
     <Content Include="my-app\src\favicon.ico" />
     <Content Include="my-app\src\index.html" />
     <Content Include="my-app\src\styles.css" />
+    <Content Include="my-app\src\tsconfig.app.json" />
+    <Content Include="my-app\src\tsconfig.spec.json" />
+    <Content Include="my-app\tsconfig.json" />
+    <Content Include="my-app\tslint.json" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -180,15 +188,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="my-app\.angular-cli.json" />
-    <Content Include="my-app\.editorconfig" />
-    <Content Include="my-app\e2e\tsconfig.e2e.json" />
-    <Content Include="my-app\package.json" />
-    <Content Include="my-app\README.md" />
-    <Content Include="my-app\src\tsconfig.app.json" />
-    <Content Include="my-app\src\tsconfig.spec.json" />
-    <Content Include="my-app\tsconfig.json" />
-    <Content Include="my-app\tslint.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -230,6 +229,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
     <TypeScriptCompile Include="my-app\e2e\app.e2e-spec.ts" />
     <TypeScriptCompile Include="my-app\e2e\app.po.ts" />
     <TypeScriptCompile Include="my-app\src\app\app.component.spec.ts" />
@@ -246,9 +248,6 @@
     <TypeScriptCompile Include="my-app\src\polyfills.ts" />
     <TypeScriptCompile Include="my-app\src\test.ts" />
     <TypeScriptCompile Include="my-app\src\typings.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
