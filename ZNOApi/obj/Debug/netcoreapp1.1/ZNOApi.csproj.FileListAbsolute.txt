@@ -1,0 +1,14 @@
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\ZNOApi.deps.json
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\ZNOApi.runtimeconfig.json
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\ZNOApi.runtimeconfig.dev.json
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\ZNOApi.dll
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\ZNOApi.pdb
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\obj\Debug\netcoreapp1.1\ZNOApi.csprojResolveAssemblyReference.cache
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\obj\Debug\netcoreapp1.1\ZNOApi.csproj.CoreCompileInputs.cache
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\obj\Debug\netcoreapp1.1\ZNOApi.AssemblyInfo.cs
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\obj\Debug\netcoreapp1.1\ZNOApi.dll
+C:\Users\Mykola Gritchuk\source\repos\MyFirstProject\ZNOApi\obj\Debug\netcoreapp1.1\ZNOApi.pdb
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\BLL.dll
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\Models.dll
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\BLL.pdb
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\ZNOApi\bin\Debug\netcoreapp1.1\Models.pdb

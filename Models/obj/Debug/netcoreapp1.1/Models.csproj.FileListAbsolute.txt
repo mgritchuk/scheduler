@@ -1,0 +1,8 @@
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\bin\Debug\netcoreapp1.1\Models.deps.json
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\bin\Debug\netcoreapp1.1\Models.dll
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\obj\Debug\netcoreapp1.1\Models.csproj.CoreCompileInputs.cache
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\obj\Debug\netcoreapp1.1\Models.AssemblyInfo.cs
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\obj\Debug\netcoreapp1.1\Models.csprojResolveAssemblyReference.cache
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\bin\Debug\netcoreapp1.1\Models.pdb
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\obj\Debug\netcoreapp1.1\Models.dll
+C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\Models\obj\Debug\netcoreapp1.1\Models.pdb
