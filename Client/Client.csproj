@@ -185,7 +185,6 @@
     <Content Include="my-app\e2e\tsconfig.e2e.json" />
     <Content Include="my-app\package.json" />
     <Content Include="my-app\README.md" />
-    <Content Include="my-app\src\assets\.gitkeep" />
     <Content Include="my-app\src\tsconfig.app.json" />
     <Content Include="my-app\src\tsconfig.spec.json" />
     <Content Include="my-app\tsconfig.json" />
@@ -220,6 +219,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="my-app\src\assets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
