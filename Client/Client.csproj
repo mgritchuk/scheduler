@@ -239,6 +239,7 @@
     <TypeScriptCompile Include="my-app\src\app\app.module.ts" />
     <TypeScriptCompile Include="my-app\src\app\base.service.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\base.service.ts" />
+    <TypeScriptCompile Include="my-app\src\app\Models\City.ts" />
     <TypeScriptCompile Include="my-app\src\app\Models\News.ts" />
     <TypeScriptCompile Include="my-app\src\app\test-component\test-component.component.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\test-component\test-component.component.ts" />

@@ -57,7 +57,7 @@ namespace BLL.Managers
 			}
 		}
 
-		public async Task<T> GetById<T>(object id, string idColumnName) where T : class
+		public async Task<T> GetById<T>(object id) where T : class
 		{
 			T res = null;
 			string table = typeof(T).Name;
@@ -73,12 +73,12 @@ namespace BLL.Managers
 			{
 				res = (await con.QueryAsync<T>(@"select *
 											from " + table +
-											" where " + idColumnName + " = @Id", new { Id = id })).FirstOrDefault();
+											" where Id = @Id", new { Id = id })).FirstOrDefault();
 			}
 			return res;
 		}
 
-		public async Task DeleteById<T>(object id, string idColumnName) where T : class
+		public async Task DeleteById<T>(object id) where T : class
 		{
 			T res = null;
 			string table = typeof(T).Name;
@@ -93,7 +93,7 @@ namespace BLL.Managers
 			using (SqlConnection con = new SqlConnection(_connectionString))
 			{
 				await con.ExecuteAsync(@"delete from " + table +
-											" where " + idColumnName + " = @Id", new { Id = id });
+											" where Id = @Id", new { Id = id });
 			}
 
 		}

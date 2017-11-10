@@ -8,3 +8,13 @@ C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\BLL\bin\Debug\netcoreapp1.1
 C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\BLL\bin\Debug\netcoreapp1.1\Models.pdb
 C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\BLL\obj\Debug\netcoreapp1.1\BLL.dll
 C:\Users\Mykola Gritchuk\Source\Repos\MyFirstProject\BLL\obj\Debug\netcoreapp1.1\BLL.pdb
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\bin\Debug\netcoreapp1.1\BLL.deps.json
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\bin\Debug\netcoreapp1.1\BLL.dll
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\bin\Debug\netcoreapp1.1\BLL.pdb
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\bin\Debug\netcoreapp1.1\Models.dll
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\bin\Debug\netcoreapp1.1\Models.pdb
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\obj\Debug\netcoreapp1.1\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\obj\Debug\netcoreapp1.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\obj\Debug\netcoreapp1.1\BLL.AssemblyInfo.cs
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\obj\Debug\netcoreapp1.1\BLL.dll
+C:\Users\Mykola Gritchuk\Source\Repos\scheduler\BLL\obj\Debug\netcoreapp1.1\BLL.pdb
