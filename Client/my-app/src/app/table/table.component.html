@@ -30,7 +30,7 @@
 			<th fxFlex="{{40 * _actionType.length}}px"></th>
 		</tr>
 
-		<tr *ngFor="let item of filterAllData() | pagination:_currentPage:_itemsPerPage:enablePagination" fxLayout="row" fxLayoutAlign="start center" (click)="selectItem(item, $event)" (dblclick)="dbClick.emit(item)" [ngClass]="{'active-row': isInSelection(item), 'banned-row' : showAllHandler && !showAllHandler(item)}">
+		<tr *ngFor="let item of filterAllData() " fxLayout="row" fxLayoutAlign="start center" (click)="selectItem(item, $event)" (dblclick)="dbClick.emit(item)" [ngClass]="{'active-row': isInSelection(item), 'banned-row' : showAllHandler && !showAllHandler(item)}"><!--| pagination:_currentPage:_itemsPerPage:enablePagination-->
 			<td fxFlexOffset="5px" *ngIf="_selectionType != SelectionType.none" fxFlex="36px" (click)="$event.stopPropagation()">
 				<mat-checkbox [checked]="isInSelection(item)" (change)="selectItem(item)" #selection></mat-checkbox>
 			</td>

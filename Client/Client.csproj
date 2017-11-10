@@ -179,7 +179,7 @@
     <Content Include="my-app\src\app\test-component\test-component.component.html" />
     <Content Include="my-app\src\favicon.ico" />
     <Content Include="my-app\src\index.html" />
-    <Content Include="my-app\src\styles.css" />
+    <None Include="my-app\src\styles.scss" />
     <Content Include="my-app\src\tsconfig.app.json" />
     <Content Include="my-app\src\tsconfig.spec.json" />
     <Content Include="my-app\tsconfig.json" />
@@ -250,6 +250,7 @@
     <TypeScriptCompile Include="my-app\src\app\services\base.service.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\services\base.service.ts" />
     <TypeScriptCompile Include="my-app\src\app\services\city.service.ts" />
+    <TypeScriptCompile Include="my-app\src\app\table\pagiantion.pipe.ts" />
     <TypeScriptCompile Include="my-app\src\app\table\table.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\test-component\test-component.component.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\test-component\test-component.component.ts" />
