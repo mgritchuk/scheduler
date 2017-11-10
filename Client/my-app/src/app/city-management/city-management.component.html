@@ -1,32 +1,14 @@
 
-<!--<div class="example-container mat-elevation-z8">
-  <cdk-table #table [dataSource]="dataSource" class="example-table">
-    
-    
-    <ng-container cdkColumnDef="Id">
-      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> ID </cdk-header-cell>
-      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.Id}} </cdk-cell>
-    </ng-container>
-
-
-    
-    <ng-container cdkColumnDef="Name">
-      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Name </cdk-header-cell>
-      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.Name}} </cdk-cell>
-    </ng-container>
-
-
-    <cdk-header-row *cdkHeaderRowDef="displayedColumns" class="example-header-row"></cdk-header-row>
-    <cdk-row *cdkRowDef="let row; columns: displayedColumns;" class="example-row"></cdk-row>
-  </cdk-table>
-</div>-->
 <div fxLayout="row" fxFlex="100%">
   <mat-card-content fxFlex="600px">
     <div>
       <data-table [columns]="columns"
                   [data]="cities"
                   enablePagination
-                  selectionType="single">
+                  selectionType="none"
+                  [editIcon]="'info_outline'"
+						      [actionType]="'edit'"
+                  (onEdit)="onEdit($event)">
         <div actions>
 
         </div>

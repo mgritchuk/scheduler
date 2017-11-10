@@ -1,0 +1,13 @@
+<h1 matDialogTitle>{{city.name}} universities</h1>
+<div mat-dialog-content fxLayout="column" fxLayoutGap="10px">
+  <data-table [columns]="columns"
+              [data]="universities"
+              enablePagination
+              selectionType="none"
+              >
+    <div actions>
+
+    </div>
+  </data-table>
+  <mat-toolbar fxFlex="1 0 auto"><span></span></mat-toolbar>
+</div>

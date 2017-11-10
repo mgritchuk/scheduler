@@ -5,27 +5,35 @@ import {
 	MatCheckboxModule, MatSelectModule, MatButtonModule, MatCardModule, MatDialogModule, MatIconModule, MatInputModule, MatSlideToggleModule, MatMenuModule, MatTabsModule, MatToolbarModule, MatProgressBarModule,
 	MatSnackBarModule, MatRadioModule, MatListModule, MatAutocompleteModule, MatChipsModule
 } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppComponent } from './app.component';
-import { TestComponentComponent } from './test-component/test-component.component';
-import { BaseService } from './base.service';
-import { CityService } from './services/city.service';
 import { MatTableModule } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
-import { } from '@angular/cdk';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PaginationPipe } from './table/pagiantion.pipe';
+import { AppComponent } from './app.component';
+//import { TestComponentComponent } from './test-component/test-component.component';
+//services
+import { BaseService } from './base.service';
+import { CityService } from './services/city.service';
+import { ZNOService } from './services/zno.service';
+
+//components
 import { CityManagementComponent } from './city-management/city-management.component';
 import { TableComponent } from './table/table.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { PaginationPipe } from './table/pagiantion.pipe';
+
+import { UniversityManagementComponent } from './university-management/university-management.component';
+import { UniversityManagementDialog } from './university-management/university-management.dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponentComponent,
+    
 	  CityManagementComponent
 	  , TableComponent,
-	  PaginationPipe
+	  PaginationPipe,
+	  UniversityManagementComponent,
+	  UniversityManagementDialog
   ],
   imports: [
 	  BrowserAnimationsModule,
@@ -58,9 +66,17 @@ import { PaginationPipe } from './table/pagiantion.pipe';
   ],
   providers: [
 	  BaseService,
-	  CityService
+	  CityService,
+	  ZNOService
 
-  ], exports: [PaginationPipe, FlexLayoutModule],
+  ], exports: [
+	  PaginationPipe,
+	  FlexLayoutModule,
+	  UniversityManagementDialog
+  ],
+  entryComponents: [
+	  UniversityManagementDialog
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

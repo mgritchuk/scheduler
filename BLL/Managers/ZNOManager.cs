@@ -24,14 +24,19 @@ namespace BLL.Managers
 
 		public async Task<IEnumerable<University>> GetUniversities(int cityId)
 		{
-			try
-			{
-				return await SPEnumerableQuery<University>("spGetUniversities", new { CityId = cityId });
-			}catch(Exception x)
-			{
+		
+			return await SPEnumerableQuery<University>("spGetUniversities", new { CityId = cityId });
+			
+		}
 
-			}
-			return null;
+		public async Task<IEnumerable<UniversitySpecialty>> GetUniversitySpecialty(int univerId)
+		{
+			return await SPEnumerableQuery<UniversitySpecialty>("spGetUniversitySpecialties", new { UniversityId = univerId });
+		}
+
+		public async Task<IEnumerable<SpecialtySubject>> GetSpecialtySubjects(int specId, int univerId)
+		{
+			return await SPEnumerableQuery<SpecialtySubject>("spGetSpecialtySubjects", new { SpecialtyId = specId, UniversityId = univerId });
 		}
 	}
 }

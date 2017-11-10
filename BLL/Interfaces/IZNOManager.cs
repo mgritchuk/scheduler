@@ -12,6 +12,7 @@ namespace BLL.Interfaces
 		Task<PersonSchedule> GetPersonSchedule(int personId);
 		Task<SchoolSchedule> GetSchoolSchedule(int schoolId);
 		Task<IEnumerable<University>> GetUniversities(int cityId);
-
+		Task<IEnumerable<UniversitySpecialty>> GetUniversitySpecialty(int univerId);
+		Task<IEnumerable<SpecialtySubject>> GetSpecialtySubjects(int specId, int univerId);
 	}
 }

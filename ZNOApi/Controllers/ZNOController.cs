@@ -10,9 +10,9 @@ using Models;
 
 namespace ZNOApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
-    public class ZNOController : Controller
-    {
+	[Route("api/[controller]/[action]")]
+	public class ZNOController : Controller
+	{
 		private readonly IZNOManager manager;
 
 		public ZNOController(IZNOManager manager)
@@ -36,48 +36,19 @@ namespace ZNOApi.Controllers
 		[HttpGet]
 		public async Task<IActionResult> GetUniversities(int cityId)
 		{
-			return Json( await manager.GetUniversities(cityId));
-		}
-
-		// GET: api/values
-		[HttpGet]
-        public async Task< IActionResult > GetSchool()
-        {
-			var x = Json(await manager.GetAllQuery<School>());
-			return Json(new string[] { "value1", "value2" });
-			
-			//
+			return Json(await manager.GetUniversities(cityId));
 		}
 
 		[HttpGet]
-		public IEnumerable<string> GetStudent()
+		public async Task<IActionResult> GetUniversitySpecialties(int univerId)
 		{
-			return new string[] { "value1", "value2" };
+			return Json(await manager.GetUniversitySpecialty(univerId));
 		}
 
-		// GET api/values/5
-		[HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put([FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-    }
+		[HttpGet]
+		public async Task<IActionResult> GetSpecialtySubjects(int specId, int univerId)
+		{
+			return Json(await manager.GetSpecialtySubjects(specId, univerId));
+		}
+	}
 }
