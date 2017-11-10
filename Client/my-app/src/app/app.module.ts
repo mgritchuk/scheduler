@@ -24,6 +24,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { UniversityManagementComponent } from './university-management/university-management.component';
 import { UniversityManagementDialog } from './university-management/university-management.dialog';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+	{ path: 'univers', component: CityManagementComponent }
+	
+];
 
 @NgModule({
   declarations: [
@@ -36,7 +42,11 @@ import { UniversityManagementDialog } from './university-management/university-m
 	  UniversityManagementDialog
   ],
   imports: [
-	  BrowserAnimationsModule,
+	  RouterModule.forRoot(
+		  appRoutes,
+		  {enableTracing: true}
+	  ),
+    BrowserAnimationsModule,
 	  BrowserModule,
 	  HttpModule,
 	  FlexLayoutModule,
