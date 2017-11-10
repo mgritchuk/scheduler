@@ -172,6 +172,9 @@
     <Content Include="my-app\README.md" />
     <Content Include="my-app\src\app\app.component.css" />
     <Content Include="my-app\src\app\app.component.html" />
+    <Content Include="my-app\src\app\city-management\city-management.component.css" />
+    <Content Include="my-app\src\app\city-management\city-management.component.html" />
+    <Content Include="my-app\src\app\table\table.component.html" />
     <Content Include="my-app\src\app\test-component\test-component.component.css" />
     <Content Include="my-app\src\app\test-component\test-component.component.html" />
     <Content Include="my-app\src\favicon.ico" />
@@ -188,6 +191,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="my-app\src\app\table\table.component.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -239,8 +243,14 @@
     <TypeScriptCompile Include="my-app\src\app\app.module.ts" />
     <TypeScriptCompile Include="my-app\src\app\base.service.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\base.service.ts" />
+    <TypeScriptCompile Include="my-app\src\app\city-management\city-management.component.spec.ts" />
+    <TypeScriptCompile Include="my-app\src\app\city-management\city-management.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\Models\City.ts" />
     <TypeScriptCompile Include="my-app\src\app\Models\News.ts" />
+    <TypeScriptCompile Include="my-app\src\app\services\base.service.spec.ts" />
+    <TypeScriptCompile Include="my-app\src\app\services\base.service.ts" />
+    <TypeScriptCompile Include="my-app\src\app\services\city.service.ts" />
+    <TypeScriptCompile Include="my-app\src\app\table\table.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\test-component\test-component.component.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\test-component\test-component.component.ts" />
     <TypeScriptCompile Include="my-app\src\environments\environment.prod.ts" />

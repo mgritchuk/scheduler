@@ -32,9 +32,9 @@ namespace ZNOApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task< IActionResult> Get(int id)
         {
-			return Json(manager.GetById<City>(id));
+			return Json(await manager.GetById<City>(id));
         }
 
         // POST api/values
@@ -45,7 +45,7 @@ namespace ZNOApi.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Put([FromBody]City city)
         {
 			await manager.Update(city);

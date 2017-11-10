@@ -1,0 +1,30 @@
+﻿.active-page-button {
+	font-weight: bold;
+}
+
+.active-row {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.banned-row {
+	background-color: rgba(256, 256, 240, 0.7);
+}
+
+
+tr {
+	cursor: pointer;
+	min-height: 40px;
+
+	&:hover:not(:first-child) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+}
+
+#top-bar{
+	margin-top:15px;
+}
+
+table{
+	min-width:100%;
+	max-width: 100%;
+}

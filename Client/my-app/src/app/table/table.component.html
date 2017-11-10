@@ -1,0 +1,64 @@
+<div fxFlex="1 0 100%" fxLayout="column">
+	<div fxFlex="1 0 auto" fxLayout="row" id="top-bar">
+		<div fxFlex="50" fxLayoutGap="20px">
+			<mat-form-field *ngIf="enablePagination" fxFlex="25%">
+				<mat-select  [(ngModel)]="_itemsPerPage" (ngModelChange)="changeItemsPerPage($event.selected)" placeholder="Items per page">
+					<mat-option [value]="10">10</mat-option>
+					<mat-option [value]="20">20</mat-option>
+					<mat-option [value]="50">50</mat-option>
+					<mat-option [value]="100">100</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-checkbox *ngIf="showAllHandler && !highlightOnly" id="showall" [(ngModel)]="_showAll" (change)="showAllChanged(_showAll)">{{'Show all'}}</mat-checkbox>
+			<mat-form-field>
+				<input matInput id="search" name="search" [ngModel]="_pattern" (ngModelChange)="patternChanged.next($event)" placeholder="{{'Search'}}">
+			</mat-form-field>
+		</div>	
+		<div fxFlex fxLayoutAlign="end center">
+			<ng-content onselect="actions"></ng-content>
+		</div>
+	</div>
+	<table fxFlex="1 0 100%">
+		<tr fxLayout="row" class="table-header">
+			<th fxFlexOffset="5px" FxLayoutAlign="center" *ngIf="_selectionType != SelectionType.none" fxFlex="36px">
+				<mat-checkbox *ngIf="_selectionType == SelectionType.multi" [checked]="data.length == selected.length" [indeterminate]="data.length != selected.length && selected.length != 0" (change)="selectAll($event.checked)"></mat-checkbox>
+			</th>
+			<th fxFlexOffset="10px" *ngFor="let column of _columns" [fxFlex]="column.width ? column.width : auto" (click)="sortBy(column.propName)" fxLayoutAlign="start center">
+				<mat-icon>{{ getSortIcon(column.propName) }}</mat-icon>
+				{{ column.header }}
+			</th>
+			<th fxFlex="{{40 * _actionType.length}}px"></th>
+		</tr>
+
+		<tr *ngFor="let item of filterAllData() | pagination:_currentPage:_itemsPerPage:enablePagination" fxLayout="row" fxLayoutAlign="start center" (click)="selectItem(item, $event)" (dblclick)="dbClick.emit(item)" [ngClass]="{'active-row': isInSelection(item), 'banned-row' : showAllHandler && !showAllHandler(item)}">
+			<td fxFlexOffset="5px" *ngIf="_selectionType != SelectionType.none" fxFlex="36px" (click)="$event.stopPropagation()">
+				<mat-checkbox [checked]="isInSelection(item)" (change)="selectItem(item)" #selection></mat-checkbox>
+			</td>
+			<td *ngFor="let column of _columns" [fxFlex]="column.width ? column.width : auto" [fxLayoutAlign]="column.align" fxFlexOffset="10px">
+				<div *ngIf="!column.isInput; else editable">
+					{{ getDisplayData(item, column.propName) }}
+				</div>
+				<ng-template #editable>
+					<div fxFlex="{{40 * _actionType.length}}px" [ngSwitch]="column.inputType">
+						<mat-checkbox *ngSwitchCase="'checkbox'" [ngModel]="item[column.propName]" [disabled]="column.inputDisabled"></mat-checkbox>
+						<mat-form-field fxFlex="{{40 * _actionType.length}}px" *ngSwitchDefault (click)="$event?.stopPropagation()">
+							<input fxFlex="{{40 * _actionType.length}}px"  matInput [ngModel]="item[column.propName]" [disabled]="column.inputDisabled" (ngModelChange)="inputChanged.next({ params: { obj: item, value: $event, prop: column.propName}, input: input})" [type]="column.type" #input>
+						</mat-form-field>
+					</div>
+				</ng-template>
+
+			</td>
+			<td fxFlex="{{40 * _actionType.length}}px" fxLayoutAlign="end">
+				<button *ngIf="_actionType.includes('edit')" mat-icon-button (click)="edit($event, item)"><mat-icon>{{editIcon ? editIcon : 'mode_edit'}}</mat-icon></button>
+				<button *ngIf="_actionType.includes('delete')" mat-icon-button (click)="delete($event, item)"><mat-icon>{{showAllHandler ? (showAllHandler(item) ? (deleteIcon ? deleteIcon : 'delete') : (altDeleteIcon ? (altDeleteIcon) : (deleteIcon ? deleteIcon : 'delete') )) : ( deleteIcon ? deleteIcon : 'delete' )}}</mat-icon></button>
+			</td>
+		</tr>
+	</table>
+	<div fxFlex="1 0 auto" *ngIf="enablePagination && (_itemsPerPage < _itemCount)" fxLayout="row" fxLayoutAlign="center">
+		<button mat-icon-button [disabled]="_currentPage == 0" (click)="choosePage(0)"><mat-icon class="icon-18px">first_page</mat-icon></button>
+		<button mat-icon-button [disabled]="_currentPage == 0" (click)="choosePage(_currentPage - 1)"><mat-icon class="icon-18px">keyboard_arrow_left</mat-icon></button>
+		<button mat-icon-button>{{ _currentPage + 1 }}</button>
+		<button mat-icon-button [disabled]="_currentPage == _totalPages - 1" (click)="choosePage(_currentPage + 1)"><mat-icon class="icon-18px">keyboard_arrow_right</mat-icon></button>
+		<button mat-icon-button [disabled]="_currentPage == _totalPages - 1" (click)="choosePage(_totalPages - 1)"><mat-icon class="icon-18px">last_page</mat-icon></button>
+	</div>
+</div>
