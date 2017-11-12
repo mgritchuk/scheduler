@@ -1,22 +1,14 @@
 <!--The whole content below can be removed with the new code.-->
-<div fxLayout="column">
- 
-  <div fxFlex>
-    <!--<app-city-management></app-city-management>-->
-    <a routerLink="/univers">Universities</a>
-    <a routerLink="/schools">Schools</a>
+<mat-toolbar color="primary">
+  <div fxLayout="column">
+
+    <div fxFlex fxLayoutGap="5px">
+      <!--<app-city-management></app-city-management>-->
+      <span routerLink="/">Home</span>
+      <span routerLink="/univers">Universities</span>
+      <span routerLink="/schools">Schools</span>
+    </div>
   </div>
-</div>
+</mat-toolbar>
 <router-outlet></router-outlet>
-<!--<ul>
-  <li>
-  	<app-test-component></app-test-component>
-  </li>
-  <li>
-    
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>-->
 

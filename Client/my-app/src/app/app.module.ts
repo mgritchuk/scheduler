@@ -66,7 +66,7 @@ const appRoutes: Routes = [
 		//]
 	},
 	{
-		path: 'details/:id',
+		path: 'schoolDetails/:id',
 		component: SchoolDetailsComponent
 	}
 ];

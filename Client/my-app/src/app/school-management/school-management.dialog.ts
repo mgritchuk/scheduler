@@ -36,7 +36,7 @@ export class SchoolManagementDialog implements OnInit {
 
 	onEdit(school: School) {
 		this.dialogRef.close();
-		this.router.navigate(['details/' + school.id.toString()], { relativeTo: this.route });
+		this.router.navigate(['schoolDetails/' + school.id.toString()], { relativeTo: this.route });
 	}
 
 }
