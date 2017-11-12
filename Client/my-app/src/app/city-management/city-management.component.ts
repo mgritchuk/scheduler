@@ -7,6 +7,8 @@ import { ColumnConfig } from '../table/table.component';
 import { ZNOService } from '../services/zno.service';
 import { University } from '../Models/University';
 import { UniversityManagementDialog } from '../university-management/university-management.dialog';
+import { SchoolManagementDialog } from '../school-management/school-management.dialog';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-city-management',
@@ -24,7 +26,11 @@ export class CityManagementComponent implements OnInit {
 	cityUnivers: University[] = [];
 	
 
-	constructor(private cityService: CityService, private znoService: ZNOService, private dialog: MatDialog) {
+	constructor(
+		private cityService: CityService,
+		private znoService: ZNOService,
+		private dialog: MatDialog,
+		private route: ActivatedRoute) {
 		this.columns = [
 			<ColumnConfig>{ propName: 'id', header: "Id", width: '100px' },
 			<ColumnConfig>{ propName: 'name', header: "Name" },
@@ -42,16 +48,17 @@ export class CityManagementComponent implements OnInit {
   }
 
 	onEdit(city: City) {
-	
-				let dialogRef = this.dialog.open(UniversityManagementDialog);
-				dialogRef.componentInstance.city = city;
-				dialogRef.componentInstance.universities = this.cityUnivers;
+
+		let isSchoolScreen = this.route.snapshot.data['isSchoolScreen'];
+		if (isSchoolScreen){
+			let dialogRef = this.dialog.open(SchoolManagementDialog);
+			dialogRef.componentInstance.city = city;
+		} else {
+			let dialogRef = this.dialog.open(UniversityManagementDialog);
+			dialogRef.componentInstance.city = city;
+		}
 				
-				//dialogRef.afterClosed().subscribe(res => {
-				//	if (res) {
-				//		this.UpdateGroup(res);
-				//	}
-				//});
+				
 			
 		
 	}

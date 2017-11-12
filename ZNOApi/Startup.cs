@@ -36,6 +36,7 @@ namespace ZNOApi
 			services.AddCors();
 			services.AddScoped<IDapperManager, DapperManager>();
 			services.AddScoped<IZNOManager, ZNOManager>();
+			services.AddScoped<ISchoolManager, SchoolManager>();
 			// Add framework services.
 			services.AddMvc();
 			

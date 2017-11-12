@@ -9,7 +9,7 @@ namespace BLL.Interfaces
 	{
 		Task<T> GetById<T>(object id) where T : class;
 		T GetQuery<T>(string sql, object parameters) where T : class;
-		IEnumerable<T> GetManyQuery<T>(string sql, object parameters) where T : class;
+		Task<IEnumerable<T>> GetEnumerableQuery<T>(string sql, object parameters) where T : class;
 		Task<object> Insert<T>(T entity, Func<T, object> id) where T : class;
 		Task Update<T>(T entity) where T : class;
 		Task DeleteById<T>(object id) where T : class;

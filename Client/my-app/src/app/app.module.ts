@@ -25,9 +25,34 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { UniversityManagementComponent } from './university-management/university-management.component';
 import { UniversityManagementDialog } from './university-management/university-management.dialog';
 import { RouterModule, Routes } from '@angular/router';
+import { SchoolManagementComponent } from './school-management/school-management.component';
+import { SchoolManagementDialog } from './school-management/school-management.dialog';
 
 const appRoutes: Routes = [
-	{ path: 'univers', component: CityManagementComponent }
+	{
+		path: 'univers',
+		component: CityManagementComponent,
+		children: [
+			{
+				path: '',
+				component: CityManagementComponent
+			},
+			{
+				path: ':index',
+				component: UniversityManagementDialog
+				
+			}],
+		data: {
+			isSchoolScreen: false
+		}
+	},
+	{
+		path: 'schools',
+		component: CityManagementComponent,
+		data: {
+         isSchoolScreen: true
+		}
+	}
 	
 ];
 
@@ -39,7 +64,9 @@ const appRoutes: Routes = [
 	  , TableComponent,
 	  PaginationPipe,
 	  UniversityManagementComponent,
-	  UniversityManagementDialog
+	  UniversityManagementDialog,
+	  SchoolManagementDialog,
+	  SchoolManagementComponent
   ],
   imports: [
 	  RouterModule.forRoot(
@@ -82,10 +109,12 @@ const appRoutes: Routes = [
   ], exports: [
 	  PaginationPipe,
 	  FlexLayoutModule,
-	  UniversityManagementDialog
+	  UniversityManagementDialog,
+    SchoolManagementDialog
   ],
   entryComponents: [
-	  UniversityManagementDialog
+	  UniversityManagementDialog,
+	  SchoolManagementDialog
   ],
   bootstrap: [AppComponent]
 })

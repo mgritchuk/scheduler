@@ -24,11 +24,11 @@ namespace BLL.Managers
 			return await GetAllQuery<School>();
 		}
 
-		public IEnumerable<T> GetManyQuery<T>(string sql, object parameters) where T : class
+		public async Task<IEnumerable<T>> GetEnumerableQuery<T>(string sql, object parameters) where T : class
 		{
 			using (SqlConnection con = new SqlConnection(_connectionString))
 			{
-				return con.Query<T>(sql, parameters);
+				return await con.QueryAsync<T>(sql, parameters);
 			}
 		}
 
