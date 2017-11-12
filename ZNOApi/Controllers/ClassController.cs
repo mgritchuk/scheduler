@@ -34,6 +34,12 @@ namespace ZNOApi.Controllers
 			return Json(await manager.GetById<Class>(id));
 		}
 
+		[HttpGet]
+		public async Task<IActionResult> GetClassRooms(int id)
+		{
+			return Json(await manager.GetEnumerableQuery<Class>(@"SELECT * FROM Class WHERE SchoolId = @SchoolID ", new { SchoolID = id }));
+		}
+
 		// POST api/values
 		[HttpPost]
 		public async Task<IActionResult> Post([FromBody]Class Class)

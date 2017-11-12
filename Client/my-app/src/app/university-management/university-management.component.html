@@ -1,13 +1,20 @@
 <h1 matDialogTitle>{{city.name}} universities</h1>
 <div mat-dialog-content fxLayout="column" fxLayoutGap="10px">
-  <data-table [columns]="columns"
-              [data]="universities"
-              enablePagination
-              selectionType="none"
-              >
-    <div actions>
+  <mat-card fxFlex="100%">
+    <mat-card-content>
+      <data-table [columns]="columns"
+                  [data]="universities"
+                  enablePagination
+                  selectionType="none">
+        <div actions>
 
-    </div>
-  </data-table>
+        </div>
+      </data-table>
+    </mat-card-content>
+  </mat-card>
   <!--<mat-toolbar fxFlex="1 0 auto"><span></span></mat-toolbar>-->
+</div>
+<div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="end" mat-dialog-actions>
+  <button fxFlex="20%" mat-raised-button (click)="dialogRef.close()">Close</button>
+
 </div>

@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="column" fxFlex="100%" fxLayoutGap="15px">
+      <mat-card>
+        <mat-card-content fxFlex="100%">
+          <div>
+            <data-table [columns]="teacherColumns"
+                        [data]="teachers"
+                        enablePagination
+                        selectionType="none">
+              <!--[editIcon]="'info_outline'"
+              [actionType]="'edit'"
+              (onEdit)="onEdit($event)"-->
+
+              <div actions>
+                <span>Teachers</span>
+              </div>
+            </data-table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content fxFlex="100%">
+          <div>
+            <data-table [columns]="pupilsColumns"
+                        [data]="pupils"
+                        enablePagination
+                        selectionType="none">
+              <div actions>
+                <span>Pupils</span>
+              </div>
+            </data-table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content fxFlex="100%">
+          <div>
+            <data-table [columns]="classColumns"
+                        [data]="classRooms"
+                        enablePagination
+                        selectionType="none">
+              <div actions>
+                <span>Class rooms</span>
+              </div>
+            </data-table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </mat-card-content>
+</mat-card>

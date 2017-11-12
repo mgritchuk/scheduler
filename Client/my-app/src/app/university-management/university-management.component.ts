@@ -17,7 +17,7 @@ export class UniversityManagementComponent extends UniversityManagementDialog {
 	//@Input() universities: University[] = [];
 
 	constructor(znoService: ZNOService, route: ActivatedRoute) {
-		super(znoService, route);
+		super(znoService, route, null);
 	}
 
 

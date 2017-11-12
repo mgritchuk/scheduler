@@ -28,6 +28,7 @@ import { UniversityManagementDialog } from './university-management/university-m
 import { RouterModule, Routes } from '@angular/router';
 import { SchoolManagementComponent } from './school-management/school-management.component';
 import { SchoolManagementDialog } from './school-management/school-management.dialog';
+import { SchoolDetailsComponent } from './school-management/school-details/school-details.component';
 
 const appRoutes: Routes = [
 	{
@@ -51,23 +52,37 @@ const appRoutes: Routes = [
 		path: 'schools',
 		component: CityManagementComponent,
 		data: {
-         isSchoolScreen: true
-		}
+			isSchoolScreen: true
+		},
+		//children: [
+		//	{
+		//		path: '',
+		//		component: CityManagementComponent
+		//	},
+		//	{
+		//		path: 'details',
+		//		component: SchoolDetailsComponent
+		//	}
+		//]
+	},
+	{
+		path: 'details/:id',
+		component: SchoolDetailsComponent
 	}
-	
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     
-	  CityManagementComponent
-	  , TableComponent,
+	  CityManagementComponent,
+	  TableComponent,
 	  PaginationPipe,
 	  UniversityManagementComponent,
 	  UniversityManagementDialog,
 	  SchoolManagementDialog,
-	  SchoolManagementComponent
+	  SchoolManagementComponent,
+	  SchoolDetailsComponent
   ],
   imports: [
 	  RouterModule.forRoot(

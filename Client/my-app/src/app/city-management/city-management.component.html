@@ -1,20 +1,22 @@
 
-<div fxLayout="row" fxFlex="100%">
-  <mat-card-content fxFlex="600px">
-    <div>
-      <data-table [columns]="columns"
-                  [data]="cities"
-                  enablePagination
-                  selectionType="none"
-                  [editIcon]="'info_outline'"
-						      [actionType]="'edit'"
-                  (onEdit)="onEdit($event)">
-        <div actions>
+<div fxLayout="row" fxFlex="100%" fxLayoutAlign="center">
+  <mat-card fxFlex="600px">
+    <mat-card-content >
+      <div>
+        <data-table [columns]="columns"
+                    [data]="cities"
+                    enablePagination
+                    selectionType="none"
+                    [editIcon]="'info_outline'"
+                    [actionType]="'edit'"
+                    (onEdit)="onEdit($event)">
+          <div actions>
 
-        </div>
-      </data-table>
-    </div>
-  </mat-card-content>
+          </div>
+        </data-table>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>
 <!--<div>
   <table>

@@ -19,7 +19,7 @@ export class UniversityManagementDialog implements OnInit {
 	columns: ColumnConfig[] = [];
 
 
-	constructor(private znoService: ZNOService, private route: ActivatedRoute) {
+	constructor(private znoService: ZNOService, private route: ActivatedRoute, public dialogRef: MatDialogRef<UniversityManagementDialog>) {
 		this.columns = [
 			<ColumnConfig>{ propName: 'name', header: "Name" },
 			<ColumnConfig>{ propName: 'address', header: "Address" }

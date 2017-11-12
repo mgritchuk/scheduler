@@ -19,16 +19,24 @@
 
 <h1 matDialogTitle>{{city.name}} schools</h1>
 <div mat-dialog-content fxLayout="column" fxLayoutGap="10px">
-  <data-table [columns]="columns"
-              [data]="schools"
-              enablePagination
-              selectionType="none"
-              [editIcon]="'info_outline'"
-              [actionType]="'edit'"
-              (onEdit)="onEdit($event)">
-    <div actions>
+  <mat-card fxFlex="100%">
+    <mat-card-content>
+      <data-table [columns]="columns"
+                  [data]="schools"
+                  enablePagination
+                  selectionType="none"
+                  [editIcon]="'info_outline'"
+                  [actionType]="'edit'"
+                  (onEdit)="onEdit($event)">
+        <div actions>
 
-    </div>
-  </data-table>
+        </div>
+      </data-table>
+    </mat-card-content>
+  </mat-card>
  
+</div>
+<div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="end" mat-dialog-actions>
+  <button fxFlex="20%" mat-raised-button (click)="dialogRef.close()">Close</button>
+
 </div>
