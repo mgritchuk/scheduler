@@ -260,6 +260,7 @@
     <TypeScriptCompile Include="my-app\src\app\services\base.service.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\services\base.service.ts" />
     <TypeScriptCompile Include="my-app\src\app\services\city.service.ts" />
+    <TypeScriptCompile Include="my-app\src\app\services\school.service.ts" />
     <TypeScriptCompile Include="my-app\src\app\services\zno.service.ts" />
     <TypeScriptCompile Include="my-app\src\app\table\pagiantion.pipe.ts" />
     <TypeScriptCompile Include="my-app\src\app\table\table.component.ts" />

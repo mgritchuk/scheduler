@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { BaseService } from './base.service';
 import { CityService } from './services/city.service';
 import { ZNOService } from './services/zno.service';
+import { SchoolService } from './services/school.service';
 
 //components
 import { CityManagementComponent } from './city-management/city-management.component';
@@ -104,7 +105,8 @@ const appRoutes: Routes = [
   providers: [
 	  BaseService,
 	  CityService,
-	  ZNOService
+	  ZNOService,
+	  SchoolService
 
   ], exports: [
 	  PaginationPipe,

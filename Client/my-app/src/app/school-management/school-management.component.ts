@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SchoolManagementDialog } from './school-management.dialog';
 import { ActivatedRoute } from '@angular/router';
+import { SchoolService } from '../services/school.service';
 
 @Component({
   selector: 'app-school-management',
@@ -9,8 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SchoolManagementComponent extends SchoolManagementDialog {
 
-	constructor(route: ActivatedRoute) {
-		super(route);
+	constructor(route: ActivatedRoute, service: SchoolService) {
+		super(route, service);
 	}
 
   

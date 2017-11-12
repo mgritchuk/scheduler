@@ -5,6 +5,7 @@ import { ZNOService } from '../services/zno.service';
 import { ActivatedRoute } from '@angular/router';
 import { City } from "../Models/City";
 import { School } from '../Models/School';
+import { SchoolService } from '../services/school.service';
 
 @Component({
 	selector: 'app-school-dialog',
@@ -17,10 +18,20 @@ export class SchoolManagementDialog implements OnInit {
 	columns: ColumnConfig[] = [];
 	schools: School[] = [];
 
-	constructor(private route: ActivatedRoute) { }
+	constructor(private route: ActivatedRoute, private schoolService: SchoolService) {
+		this.columns = [
+			<ColumnConfig>{ propName: 'name', header: "Name" },
+			<ColumnConfig>{ propName: 'address', header: "Address" }
+			//<ColumnConfig>{ propName: 'isReserve', header: "Is reserve" }
+		];
+	}
 
 	ngOnInit() {
-
+		this.schoolService.GetSchoolsByCityId(this.city.id).subscribe(res => {
+			if (res) {
+				this.schools = res;
+			}
+		});
 	}
 
 }
