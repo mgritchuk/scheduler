@@ -29,7 +29,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { SchoolManagementComponent } from './school-management/school-management.component';
 import { SchoolManagementDialog } from './school-management/school-management.dialog';
 import { SchoolDetailsComponent } from './school-management/school-details/school-details.component';
-import { GetUniversitiesComponent } from './get-universities/get-universities.component';
+import { GetUniversitiesComponent } from './questions/get-universities/get-universities.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { UniversitySpecialtiesComponent } from './questions/university-specialties/university-specialties.component';
+import { PersonScheduleComponent } from './questions/person-schedule/person-schedule.component';
+import { SchoolScheduleComponent } from './questions/school-schedule/school-schedule.component';
 
 const appRoutes: Routes = [
 	{
@@ -69,7 +73,11 @@ const appRoutes: Routes = [
 	{
 		path: 'schoolDetails/:id',
 		component: SchoolDetailsComponent
-	}
+	},
+  {
+	  path: 'questions',
+	  component: QuestionsComponent
+  }
 ];
 
 @NgModule({
@@ -84,7 +92,11 @@ const appRoutes: Routes = [
 	  SchoolManagementDialog,
 	  SchoolManagementComponent,
 	  SchoolDetailsComponent,
-	  GetUniversitiesComponent
+	  GetUniversitiesComponent,
+	  QuestionsComponent,
+	  UniversitySpecialtiesComponent,
+	  PersonScheduleComponent,
+	  SchoolScheduleComponent
   ],
   imports: [
 	  RouterModule.forRoot(

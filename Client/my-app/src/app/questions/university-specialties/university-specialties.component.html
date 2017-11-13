@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <mat-toolbar>Get university specialties</mat-toolbar>
+
+    <data-table [columns]="columns"
+                [data]="universitySpecialties"
+                enablePagination
+                selectionType="none">
+      <div actions>
+        <mat-form-field>
+          <input matInput [ngModel]="univerId" (ngModelChange)="patternChanged.next($event)" name="univerId" type="number" min="1" placeholder="University ID" />
+        </mat-form-field>
+      </div>
+    </data-table>
+
+
+
+  </mat-card-content>
+</mat-card>

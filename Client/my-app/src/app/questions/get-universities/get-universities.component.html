@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <mat-toolbar>Get universities by citty ID</mat-toolbar>
+   
+    <data-table [columns]="columns"
+                [data]="universities"
+                enablePagination
+                selectionType="none">
+      <div actions>
+        <mat-form-field>
+          <input matInput [ngModel]="cityId" (ngModelChange)="patternChanged.next($event)" name="cityId" type="number" min="1" placeholder="City ID" />
+        </mat-form-field>
+      </div>
+    </data-table>
+    
+       
+
+  </mat-card-content>
+</mat-card>

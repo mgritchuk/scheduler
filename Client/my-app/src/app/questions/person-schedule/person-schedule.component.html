@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <mat-toolbar>Get schedule for person</mat-toolbar>
+
+    <data-table [columns]="columns"
+                [data]="schedule"
+                enablePagination
+                selectionType="none">
+      <div actions>
+        <mat-form-field>
+          <input matInput [ngModel]="personId" (ngModelChange)="patternChanged.next($event)" name="personId" type="number" min="1" placeholder="Person ID" />
+        </mat-form-field>
+      </div>
+    </data-table>
+
+
+
+  </mat-card-content>
+</mat-card>

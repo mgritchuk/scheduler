@@ -3,6 +3,9 @@ import { environment } from 'environments/environment';
 import { Response, Http, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { University } from '../Models/University';
+import { PersonSchedule } from '../Models/PersonSchedule';
+import { SchoolSchedule } from '../Models/SchoolSchedule';
+import { UniversitySpecialty } from '../Models/UniversitySpecialty';
 import 'rxjs/add/operator/map';
 import { BaseService } from './base.service';
 
@@ -28,5 +31,20 @@ export class ZNOService extends BaseService {
 
 	}
 
+	GetUniversitySpecialties(univerId: number): Observable<UniversitySpecialty[]> {
+		return this.http.get(this.apiUrl + "api/ZNO/GetUniversitySpecialties?univerId=" + univerId)
+			.map(response => response.json() as UniversitySpecialty[]);
+
+	}
+
+	GetPersonSchedule(personId: number): Observable<PersonSchedule[]> {
+		return this.http.get(this.apiUrl + "api/ZNO/GetPersonSchedule?personId=" + personId)
+			.map(response => response.json() as PersonSchedule[]);
+	}
+
+	GetSchoolSchedule(schoolId: number): Observable<SchoolSchedule[]> {
+		return this.http.get(this.apiUrl + "api/ZNO/GetSchoolSchedule?schoolId=" + schoolId)
+			.map(response => response.json() as SchoolSchedule[]);
+	}
 
 }
