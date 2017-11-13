@@ -9,8 +9,8 @@ namespace BLL.Interfaces
 {
     public interface IZNOManager : IDapperManager
     {
-		Task<PersonSchedule> GetPersonSchedule(int personId);
-		Task<SchoolSchedule> GetSchoolSchedule(int schoolId);
+		Task<IEnumerable<PersonSchedule>> GetPersonSchedule(int personId);
+		Task<IEnumerable<SchoolSchedule>> GetSchoolSchedule(int schoolId);
 		Task<IEnumerable<University>> GetUniversities(int cityId);
 		Task<IEnumerable<UniversitySpecialty>> GetUniversitySpecialty(int univerId);
 		Task<IEnumerable<SpecialtySubject>> GetSpecialtySubjects(int specId, int univerId);

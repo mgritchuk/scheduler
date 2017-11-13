@@ -29,6 +29,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SchoolManagementComponent } from './school-management/school-management.component';
 import { SchoolManagementDialog } from './school-management/school-management.dialog';
 import { SchoolDetailsComponent } from './school-management/school-details/school-details.component';
+import { GetUniversitiesComponent } from './get-universities/get-universities.component';
 
 const appRoutes: Routes = [
 	{
@@ -82,7 +83,8 @@ const appRoutes: Routes = [
 	  UniversityManagementDialog,
 	  SchoolManagementDialog,
 	  SchoolManagementComponent,
-	  SchoolDetailsComponent
+	  SchoolDetailsComponent,
+	  GetUniversitiesComponent
   ],
   imports: [
 	  RouterModule.forRoot(

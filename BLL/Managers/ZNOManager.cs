@@ -10,15 +10,15 @@ namespace BLL.Managers
 {
     public class ZNOManager : DapperManager, IZNOManager
     {
-		public async Task< PersonSchedule > GetPersonSchedule(int personId)
+		public async Task<IEnumerable< PersonSchedule> > GetPersonSchedule(int personId)
 		{
-			return await SPQuery<PersonSchedule>("spGetPersonSchedule", new { PersonId = personId });
+			return await SPEnumerableQuery<PersonSchedule>("spGetPersonSchedule", new { PersonId = personId });
 		}
 
-		public async Task<SchoolSchedule> GetSchoolSchedule(int schoolId)
+		public async Task<IEnumerable< SchoolSchedule>> GetSchoolSchedule(int schoolId)
 		{
 			
-			return await SPQuery<SchoolSchedule>("spGetSchoolSchedule", new { SchoolId = schoolId });
+			return await SPEnumerableQuery<SchoolSchedule>("spGetSchoolSchedule", new { SchoolId = schoolId });
 			
 		}
 
