@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content fxLayoutGap="10px">
+    <mat-toolbar>Get specialty subjects for university</mat-toolbar>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <mat-form-field fxFlex>
+        <input matInput [(ngModel)]="specId" name="specId" type="number" min="1" placeholder="Specialty ID" />
+      </mat-form-field>
+      <mat-form-field fxFlex>
+        <input fxFlex matInput [(ngModel)]="univerId" name="univerId" type="number" min="1" placeholder="University ID" />
+      </mat-form-field>
+      <button mat-raised-button (click)="accept()">Search</button>
+    </div>
+   
+    <data-table [columns]="columns"
+                [data]="data"
+                enablePagination
+                selectionType="none">
+      <div actions>
+       
+        
+      </div>
+    </data-table>
+
+
+
+  </mat-card-content>
+</mat-card>

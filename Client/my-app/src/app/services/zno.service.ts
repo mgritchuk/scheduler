@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { University } from '../Models/University';
 import { PersonSchedule } from '../Models/PersonSchedule';
 import { SchoolSchedule } from '../Models/SchoolSchedule';
+import { SpecialtySubject } from '../Models/SpecialtySubject';
 import { UniversitySpecialty } from '../Models/UniversitySpecialty';
 import 'rxjs/add/operator/map';
 import { BaseService } from './base.service';
@@ -46,5 +47,11 @@ export class ZNOService extends BaseService {
 		return this.http.get(this.apiUrl + "api/ZNO/GetSchoolSchedule?schoolId=" + schoolId)
 			.map(response => response.json() as SchoolSchedule[]);
 	}
+
+	GetSpecialtySubjects(specId: number, univerId: number): Observable<SpecialtySubject[]> {
+		return this.http.get(this.apiUrl + "api/ZNO/GetSpecialtySubjects?specId=" + specId + "&univerId=" + univerId)
+			.map(response => response.json() as SpecialtySubject[]);
+	}
+
 
 }

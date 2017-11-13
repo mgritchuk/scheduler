@@ -46,7 +46,7 @@ namespace ZNOApi.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> GetSpecialtySubjects(int specId, int univerId)
+		public async Task<IActionResult> GetSpecialtySubjects(int specId, int? univerId = null)
 		{
 			return Json(await manager.GetSpecialtySubjects(specId, univerId));
 		}

@@ -182,6 +182,8 @@
     <Content Include="my-app\src\app\questions\questions.component.html" />
     <Content Include="my-app\src\app\questions\school-schedule\school-schedule.component.css" />
     <Content Include="my-app\src\app\questions\school-schedule\school-schedule.component.html" />
+    <Content Include="my-app\src\app\questions\specialty-subjects\specialty-subjects.component.css" />
+    <Content Include="my-app\src\app\questions\specialty-subjects\specialty-subjects.component.html" />
     <Content Include="my-app\src\app\questions\university-specialties\university-specialties.component.css" />
     <Content Include="my-app\src\app\questions\university-specialties\university-specialties.component.html" />
     <Content Include="my-app\src\app\school-management\school-details\school-details.component.css" />
@@ -263,6 +265,7 @@
     <TypeScriptCompile Include="my-app\src\app\city-management\city-management.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\Models\PersonSchedule.ts" />
     <TypeScriptCompile Include="my-app\src\app\Models\SchoolSchedule.ts" />
+    <TypeScriptCompile Include="my-app\src\app\Models\SpecialtySubject.ts" />
     <TypeScriptCompile Include="my-app\src\app\Models\UniversitySpecialty.ts" />
     <TypeScriptCompile Include="my-app\src\app\questions\get-universities\get-universities.component.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\questions\get-universities\get-universities.component.ts" />
@@ -279,6 +282,8 @@
     <TypeScriptCompile Include="my-app\src\app\questions\questions.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\questions\school-schedule\school-schedule.component.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\questions\school-schedule\school-schedule.component.ts" />
+    <TypeScriptCompile Include="my-app\src\app\questions\specialty-subjects\specialty-subjects.component.spec.ts" />
+    <TypeScriptCompile Include="my-app\src\app\questions\specialty-subjects\specialty-subjects.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\questions\university-specialties\university-specialties.component.spec.ts" />
     <TypeScriptCompile Include="my-app\src\app\questions\university-specialties\university-specialties.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\school-management\school-details\school-details.component.spec.ts" />

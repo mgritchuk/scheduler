@@ -34,7 +34,7 @@ namespace BLL.Managers
 			return await SPEnumerableQuery<UniversitySpecialty>("spGetUniversitySpecialties", new { UniversityId = univerId });
 		}
 
-		public async Task<IEnumerable<SpecialtySubject>> GetSpecialtySubjects(int specId, int univerId)
+		public async Task<IEnumerable<SpecialtySubject>> GetSpecialtySubjects(int specId, int? univerId)
 		{
 			return await SPEnumerableQuery<SpecialtySubject>("spGetSpecialtySubjects", new { SpecialtyId = specId, UniversityId = univerId });
 		}

@@ -34,6 +34,7 @@ import { QuestionsComponent } from './questions/questions.component';
 import { UniversitySpecialtiesComponent } from './questions/university-specialties/university-specialties.component';
 import { PersonScheduleComponent } from './questions/person-schedule/person-schedule.component';
 import { SchoolScheduleComponent } from './questions/school-schedule/school-schedule.component';
+import { SpecialtySubjectsComponent } from './questions/specialty-subjects/specialty-subjects.component';
 
 const appRoutes: Routes = [
 	{
@@ -96,7 +97,8 @@ const appRoutes: Routes = [
 	  QuestionsComponent,
 	  UniversitySpecialtiesComponent,
 	  PersonScheduleComponent,
-	  SchoolScheduleComponent
+	  SchoolScheduleComponent,
+	  SpecialtySubjectsComponent
   ],
   imports: [
 	  RouterModule.forRoot(
